@@ -1,0 +1,41 @@
+:root {
+  --primary-color: #0066ee;
+  --completed-color: #6c757d;
+}
+
+/* List styles */
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#todo-list li {
+  background: #fff;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Visual indication for focus on editable items */
+#todo-list li[contenteditable="true"]:focus {
+  outline: 2px dashed var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Style for completed items */
+.completed {
+  text-decoration: line-through;
+  color: var(--completed-color);
+}
+.completed::before {
+  content: "✔ ";  /* checkmark indicator */
+  color: green;
+}
+
+/* Responsive adjustments (if needed) */
+@media (max-width: 600px) {
+  #todo-list li {
+    font-size: 1rem;
+  }
+}
