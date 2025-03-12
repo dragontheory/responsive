@@ -1,1 +1,55 @@
-test
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <meta name="author" content="D7460N">
+    <meta name="description" content="Data, framework, platform, resolution, and browser agnostic modern HTML and CSS template.">
+    <link rel="styesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="styesheet" type="text/css" href="assets/css/layout.css">
+    <link rel="styesheet" type="text/css" href="assets/css/heuristics.css">
+    <link rel="styesheet" type="text/css" href="assets/css/typography.css">
+    <link rel="styesheet" type="text/css" href="assets/css/themes.css">
+    <link rel="styesheet" type="text/css" href="assets/css/a11y.css">
+    <link rel="styesheet" type="text/css" href="assets/css/transitions.css">
+    <link rel="styesheet" type="text/css" href="assets/css/scrollbars.css">
+    <title>D7460N Template</title>
+  </head>
+
+  <body>
+    <app-container>
+      <header>
+        <app-logo>D7460N Logo</app-logo>
+        <color-scheme>
+          <input type="radio" name="color-scheme" id="light-dark" title="System color scheme - default" value="light dark" checked>
+          <label for="light-dark">&#9881;</label>
+          <input type="radio" name="color-scheme" id="light" title="Light color scheme" value="light" checked>
+          <label for="light">&#9788;</label>
+          <input type="radio" name="color-scheme" id="dark" title="Dark color scheme" value="Dark" checked>
+          <label for="light">&#9789;</label>
+        </color-scheme>
+        <app-user>First Lastname</app-user>
+      </header>
+      <nav>
+        <input type="radio" name="tabset" id="tab1" aria-controls="Home" checked>
+        <label for="tab1">HOME</label>
+        <input type="radio" name="tabset" id="tab2" aria-controls="About" checked>
+        <label for="tab1">ABOUT</label>
+        <input type="radio" name="tabset" id="tab3" aria-controls="History" checked>
+        <label for="tab1">HISTORY</label>
+        <input type="radio" name="tabset" id="tab4" aria-controls="Policy" checked>
+        <label for="tab1">POLICY</label>
+        <input type="radio" name="tabset" id="tab5" aria-controls="Contact" checked>
+        <label for="tab1">CONTACT</label>
+      </nav>
+      <main>
+        <article>
+          <p>Shows content before scrolling area below.</p>
+        </article>
+      </main>
+    </app-container>
+  </body>
+
+</html>
