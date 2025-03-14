@@ -42,6 +42,7 @@ HTML elements mapped to tabs without classes
 
   nav label {
     cursor: pointer;
+    -webkit-user-select: none;
     user-select: none;
     transition: border var(--transition-length), opacity var(--transition-length);
   }
