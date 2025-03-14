@@ -1,0 +1,63 @@
+/* MARK: TYPOGRAPHY ----------
+*/
+
+@layer typography {
+  :root {
+    font-family: 'oxaniumlight', sans-serif;
+    font-size: clamp(1rem, 2cqi, 2rem);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p,
+  li,
+  figcaption {
+    text-wrap: pretty;
+  }
+
+  @font-face {
+    font-family: 'oxaniumregular';
+    src: url(data:application/font-woff;base64);
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'oxaniummedium';
+    src: url(data:application/font-woff;base64);
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'oxaniumbold';
+    src: url(data:application/font-woff;base64);
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'oxaniumlight';
+    src: url(data:application/font-woff;base64);
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'iceland';
+    src: url('https://github.com/pages/dragontheory/responsive/assets/css/fonts/IceLand-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'electrolize';
+    src: url('https://github.com/pages/dragontheory/responsive/assets/css/fonts/Electrolize-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+  }
+}

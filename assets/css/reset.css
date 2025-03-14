@@ -1,0 +1,23 @@
+/* MARK: RESET ---------
+*/
+@layer reset {
+  :root {
+    interpolate-size: allow-keywords;
+
+    /* https://jakelazaroff.com/words/my-modern-css-reset/#user-content-fn-ackshually */
+
+    *,
+    *:before,
+    *:after,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      line-height: 1.5;
+    }
+  }
+}

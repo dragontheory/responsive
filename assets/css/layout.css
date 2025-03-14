@@ -1,1 +1,205 @@
-test
+/* MARK: BASELAYOUT ----------
+*/
+@layer baselayout {
+
+  html,
+  body,
+  app-container,
+  main,
+  article {
+    overflow: hidden;
+  }
+
+  article {
+    align-content: start;
+  }
+
+  section {
+    overflow: auto;
+  }
+
+  app-container,
+  header,
+  footer,
+  nav,
+  aside,
+  main,
+  section,
+  article,
+  ul,
+  li {
+    container-type: inline-size;
+    display: grid;
+  }
+
+  app-container {
+    grid-template-rows: auto auto 1fr auto;
+    padding: 1em;
+    height: 100dvh;
+  }
+}
+
+/*  MARK: HEADER ----------
+*/
+@layer header {
+  header {
+    grid-template-columns: 1fr auto auto;
+    border-radius: 0.3em;
+    user-select: none;
+  }
+
+  app-logo,
+  app-user {
+    padding-block: 0.5em;
+    padding-inline: 1em;
+  }
+
+  app-logo {
+    position: relative;
+    padding-inline-start: 4rem;
+  }
+
+  /* MARK: COLOR-SCHEME
+  */
+  color-scheme {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 0.3rem;
+    font-size: 0.7rem;
+  }
+
+  color-scheme input[type="radio"] {
+    position: absolute;
+    left: -200vw;
+  }
+
+  color-scheme label {
+    display: grid;
+    cursor: pointer;
+    user-select: none;
+    align-content: center;
+    justify-content: center;
+    opacity: 0.5;
+  }
+
+  color-scheme label:nth-of-type(2) {
+    margin-block-start: 1px;
+  }
+
+  color-scheme label:hover,
+  color-scheme input:focus+label,
+  color-scheme input:checked+label {
+    opacity: 0.7;
+  }
+}
+
+/* MARK: NAV ---------
+*/
+@layer nav {
+  nav {
+    grid-template-columns: repeat(auto-fit, minmax(4rem, min-content));
+    gap: 0.5rem;
+    justify-content: end;
+  }
+
+  nav label {
+    max-width: max-content;
+    text-align: center;
+    margin-block-start: 1rem;
+    position: relative;
+    display: inline-block;
+    padding: 0.3rem;
+    border: 0.1rem solid transparent;
+    transition: border var(--transition-length), opacity var(--transition-length);
+  }
+}
+
+/* MARK: MAIN ---------
+*/
+@layer main {
+  main ul {
+    margin-block-start: 0;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 1em;
+  }
+}
+
+
+/* MARK: H1-H3 ---------
+*/
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+  margin-inline: 1rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-block-start: 1rem;
+  margin-inline: 1rem;
+}
+
+/* MARK: P ---------
+*/
+p:first-child {
+  margin-block-end: 1rem;
+}
+
+p:last-child {
+  margin-block-end: 3rem;
+}
+
+/* MARK: HR ---------
+*/
+hr {
+  display: grid;
+  position: relative;
+  overflow: visible;
+  opacity: 0.15;
+  margin-block-start: 3rem;
+  margin-block-end: 2rem;
+}
+
+hr::before {
+  content: "\00A7";
+  font-family: serif;
+  font-size: 4rem;
+  position: absolute;
+  place-self: center;
+  transform: rotate(90deg);
+  transform-origin: center;
+  opacity: 1;
+}
+
+img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  width: 100%;
+}
+
+/* MARK: FOOTER ---------
+*/
+@layer footer {
+  footer {
+    grid-template-columns: repeat(auto-fit, minmax(max-content, 8em));
+    justify-content: space-between;
+    border-radius: 0.3em;
+    user-select: none;
+  }
+
+  footer ul {
+    grid-template-columns: repeat(auto-fit, minmax(auto, 1.5em));
+  }
+
+  footer ul li,
+  app-copy {
+    padding-block: 0.5em;
+    padding-inline: 1em;
+  }
+}

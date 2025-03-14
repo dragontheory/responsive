@@ -1,0 +1,112 @@
+/* MARK: THEMES ----------
+*/
+@layer themes {
+  :root {
+    color-scheme: light dark;
+
+    --primary-color: light-dark(#2B2A33, #FBFBFE);
+    --secondary-color: light-dark(#2B2A33, #FBFBFE);
+    --tertiary-color:  light-dark(#2B2A33, #FBFBFE);
+
+    --primary-background: light-dark(#FBFBFE, #2B2A33);
+    --secondary-background: light-dark(rgba(0,0,0,0.09), rgba(255,255,255,0.09));
+    --tertiary-background: light-dark(#FBFBFE, #2B2A33);
+
+    --primary-highlight-color: light-dark(#00DDFF, #00DDFF);
+    --secondary-highlight-color: light-dark(#42414D, #42414D);
+    --tertiary-highlight-color: light-dark(#0A84FF, #0A84FF);
+
+    --transition-length: 250ms;
+
+    --text-shadow: light-dark(-1px 1px 0 rgba(255,255,255,0.5), -1px 1px 0 rgba(0,0,0,0.5));
+
+    --primary-color: light-dark(#333333, #FAFAFA);
+    --primary-background: light-dark(#CCCCCC, #1C1B22);
+    --highlight-color: light-dark(rgba(48,190,255,0.5), rgba(48,190,255,1.0));
+
+    &:has(input[name="color-scheme"][value="light dark"]:checked) {
+      color-scheme: light dark;
+    }
+
+    &:has(input[name="color-scheme"][value="light"]:checked) {
+      color-scheme: light;
+    }
+
+    &:has(input[name="color-scheme"][value="dark"]:checked) {
+      color-scheme: dark;
+    }
+
+    accent-color: var(--primary-highlight-color);
+  }
+
+  header,
+  footer {
+    background-color: var(--secondary-background);
+    transition: color var(--transition-length), background-color var(--transition-length);
+    -webkit-transition: color var(--transition-length), background-color var(--transition-length);
+    -moz-transition: color var(--transition-length), background-color var(--transition-length);
+    -ms-transition: color var(--transition-length), background-color var(--transition-length);
+    -o-transition: color var(--transition-length), background-color var(--transition-length);
+  }
+
+  body {
+    color: var(--primary-color);
+    background-color: var(--primary-background);
+    transition: color var(--transition-length), background-color var(--transition-length);
+  }
+
+  app-logo::before {
+    content: '';
+    display: block;
+    width: 4em;
+    height: 4em;
+    background-color: currentColor;
+    mask: url(https://github.com/pages/dragontheory/responsive/assets/images/brand/logo.svg) no-repeat center / contain;
+    -webkit-mask: url(https://github.com/pages/dragontheory/responsive/assets/images/brand/logo.svg) no-repeat center / contain;
+    position: absolute;
+    inset-block-start: -1.1em;
+    inset-inline-start: 0;
+  }
+
+  p {
+    opacity: 0.7;
+  }
+
+  mark {
+    background-color: var(--primary-highlight-color);
+    padding: 0.2rem 0.3rem;
+    border-radius: 0.2rem;
+    transition: color var(--transition-length), background-color var(--transition-length);
+  }
+
+  code {
+    padding: 0.2rem 0.3rem;
+    box-shadow: inset 0 0 0 2px var(--primary-highlight-color);
+    border-radius: 0.2rem;
+    transition: color var(--transition-length), box-shadow var(--transition-length);
+  }
+
+  nav label {
+    opacity: 0.5;
+  }
+
+  nav label:hover,
+  nav input:focus+label,
+  nav input:checked+label {
+    opacity: 0.7;
+    border-bottom: 0.01rem solid var(--primary-highlight-color);
+  }
+
+  nav input:checked+label {
+    border-bottom: 0.01rem solid var(--primary-highlight-color);
+  }
+
+  /* https://moderncss.dev/12-modern-css-one-line-upgrades/#text-underline-offset */
+  a:not([class]) {
+    color: var(--primary-highlight-color);
+    text-underline-offset: 0.25rem;
+    text-decoration-thickness: 0.01rem;
+    text-decoration-color: var(--primary-highlight-color);
+    -moz-text-decoration-color: var(--primary-highlight-color);
+  }
+}

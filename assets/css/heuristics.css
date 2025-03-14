@@ -1,0 +1,48 @@
+/* MARK: HEURISTICS ----------
+*/
+
+/* TABS
+HTML elements mapped to tabs without classes
+  tabs = <nav>
+  tab = <label>
+  tab-panels = <main>
+  tab-panel = <article>
+*/
+
+@layer heuristics {
+  /* Accessibility */
+  nav>input[type="radio"] {
+    position: absolute;
+    left: -200vw;
+  }
+
+  article {
+    /* within-page smoother transitions */
+    transition: opacity 1s allow-discrete;
+    position: absolute;
+    opacity: 0;
+    align-content: start;
+  }
+
+  @starting-style {
+    article {
+      opacity: 0;
+    }
+  }
+
+  app-container nav:has(input:first-child:checked:checked)~main>article:first-child,
+  app-container nav:has(input:nth-child(3):checked)~main>article:nth-child(2),
+  app-container nav:has(input:nth-child(5):checked)~main>article:nth-child(3),
+  app-container nav:has(input:nth-child(7):checked)~main>article:nth-child(4),
+  app-container nav:has(input:nth-child(9):checked)~main>article:nth-child(5),
+  app-container nav:has(input:nth-child(11):checked)~main>article:nth-child(6) {
+    position: relative;
+    opacity: 1.0;
+  }
+
+  nav label {
+    cursor: pointer;
+    user-select: none;
+    transition: border var(--transition-length), opacity var(--transition-length);
+  }
+}
