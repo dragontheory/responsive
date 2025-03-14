@@ -77,6 +77,7 @@
   color-scheme label {
     display: grid;
     cursor: pointer;
+    -webkit-user-select: none;
     user-select: none;
     align-content: center;
     justify-content: center;
@@ -191,6 +192,7 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(max-content, 8em));
     justify-content: space-between;
     border-radius: 0.3em;
+    -webkit-user-select: none;
     user-select: none;
   }
 
