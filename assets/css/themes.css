@@ -61,8 +61,8 @@
     width: 4em;
     height: 4em;
     background-color: currentColor;
-    mask: url(https://github.com/pages/dragontheory/responsive/assets/images/brand/logo.svg) no-repeat center / contain;
-    -webkit-mask: url(https://github.com/pages/dragontheory/responsive/assets/images/brand/logo.svg) no-repeat center / contain;
+    mask: url(assets/images/brand/logo.svg) no-repeat center / contain;
+    -webkit-mask: url(assets/images/brand/logo.svg) no-repeat center / contain;
     position: absolute;
     inset-block-start: -1.1em;
     inset-inline-start: 0;
