@@ -6,10 +6,10 @@
 
     --primary-color: light-dark(#2B2A33, #FBFBFE);
     --secondary-color: light-dark(#2B2A33, #FBFBFE);
-    --tertiary-color:  light-dark(#2B2A33, #FBFBFE);
+    --tertiary-color: light-dark(#2B2A33, #FBFBFE);
 
     --primary-background: light-dark(#FBFBFE, #2B2A33);
-    --secondary-background: light-dark(rgba(0,0,0,0.09), rgba(255,255,255,0.09));
+    --secondary-background: light-dark(rgba(0, 0, 0, 0.09), rgba(255, 255, 255, 0.09));
     --tertiary-background: light-dark(#FBFBFE, #2B2A33);
 
     --primary-highlight-color: light-dark(#00DDFF, #00DDFF);
@@ -18,11 +18,11 @@
 
     --transition-length: 250ms;
 
-    --text-shadow: light-dark(-1px 1px 0 rgba(255,255,255,0.5), -1px 1px 0 rgba(0,0,0,0.5));
+    --text-shadow: light-dark(-1px 1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(0, 0, 0, 0.5));
 
     --primary-color: light-dark(#333333, #FAFAFA);
     --primary-background: light-dark(#CCCCCC, #1C1B22);
-    --highlight-color: light-dark(rgba(48,190,255,0.5), rgba(48,190,255,1.0));
+    --highlight-color: light-dark(rgba(48, 190, 255, 0.5), rgba(48, 190, 255, 1.0));
 
     &:has(input[name="color-scheme"][value="light dark"]:checked) {
       color-scheme: light dark;
@@ -61,8 +61,16 @@
     width: 4em;
     height: 4em;
     background-color: currentColor;
-    mask: url(assets/images/brand/logo.svg) no-repeat center / contain;
-    -webkit-mask: url(assets/images/brand/logo.svg) no-repeat center / contain;
+    mask-image: url(/images/brand/logo.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+
+    -webkit-mask-image: url(/images/brand/logo.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+
     position: absolute;
     inset-block-start: -1.1em;
     inset-inline-start: 0;

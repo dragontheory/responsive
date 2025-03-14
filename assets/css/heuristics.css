@@ -10,6 +10,7 @@ HTML elements mapped to tabs without classes
 */
 
 @layer heuristics {
+
   /* Accessibility */
   nav>input[type="radio"] {
     position: absolute;
