@@ -167,6 +167,12 @@ hr {
   margin-block-end: 2rem;
 }
 
+/* MARK: BUTTON ---------
+*/
+section button {
+  place-self: center;
+}
+
 hr::before {
   content: "\00A7";
   font-family: serif;
@@ -181,7 +187,7 @@ hr::before {
 img {
   -o-object-fit: cover;
   object-fit: cover;
-  width: 100%;
+  height: 100%;
   width: 100%;
 }
 

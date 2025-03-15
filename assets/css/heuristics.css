@@ -25,21 +25,26 @@ HTML elements mapped to tabs without classes
     align-content: start;
   }
 
-  @starting-style {
-    article {
-      opacity: 0;
-    }
+  nav:has(input:nth-of-type(1):checked)~main article:nth-of-type(1),
+  nav:has(input:nth-of-type(2):checked)~main article:nth-of-type(2),
+  nav:has(input:nth-of-type(3):checked)~main article:nth-of-type(3),
+  nav:has(input:nth-of-type(4):checked)~main article:nth-of-type(4),
+  nav:has(input:nth-of-type(5):checked)~main article:nth-of-type(5),
+  nav:has(input:nth-of-type(6):checked)~main article:nth-of-type(6) {
+    position: relative;
+    opacity: 1.0;
   }
 
-  app-container nav:has(input:first-child:checked:checked)~main>article:first-child,
+  /* app-container nav:has(input:first-child:checked:checked)~main>article:first-child,
   app-container nav:has(input:nth-child(3):checked)~main>article:nth-child(2),
   app-container nav:has(input:nth-child(5):checked)~main>article:nth-child(3),
   app-container nav:has(input:nth-child(7):checked)~main>article:nth-child(4),
   app-container nav:has(input:nth-child(9):checked)~main>article:nth-child(5),
-  app-container nav:has(input:nth-child(11):checked)~main>article:nth-child(6) {
+  app-container nav:has(input:nth-child(11):checked)~main>article:nth-child(6),
+  app-container nav:has(input:nth-child(13):checked)~main>article:nth-child(7) {
     position: relative;
     opacity: 1.0;
-  }
+  } */
 
   nav label {
     cursor: pointer;
