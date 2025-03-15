@@ -1,10 +1,15 @@
-button {
-  max-width: fit-content;
-  padding: 1em 2em;
-  cursor: pointer;
-  -webkit-user-select: none;
-  user-select: none;
-  margin-block-start: 1rem;
-  margin-inline-start: 1rem;
-  margin-inline-end: 1rem;
+/* MARK: BUTTONS ----------
+*/
+@layer buttons {
+
+  button {
+    max-width: fit-content;
+    padding: 1em 2em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    margin-block-start: 1rem;
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+  }
 }
