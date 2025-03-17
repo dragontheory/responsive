@@ -16,6 +16,21 @@
     letter-spacing: .15rem;
   }
 
+  h1 {
+    font-size: clamp(2rem, 4cqi, 4rem);
+    margin-block: 2rem;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 3cqi, 3.5rem);
+    margin-block: 1.5rem;
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 3cqi, 3rem);
+    margin-block: 1rem;
+  }
+
   p,
   li,
   figcaption {

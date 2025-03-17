@@ -1,3 +1,5 @@
+/* https://codepen.io/dragontheory/pen/bNGgZYZ?editors=1100 */
+
 /* MARK: TABLES ----------
 */
 @layer tables {
@@ -13,8 +15,8 @@
   /* big */
   @media screen and (min-width: 45rem) {
     .list {
-      /* display: table; */
-      /* margin: 1em; */
+      display: table;
+      margin: 1em;
     }
 
     .list ul {
@@ -25,9 +27,9 @@
       padding-inline-start: 1rem;
     }
 
-    /* ul:first-child li {
-    background-color: color-mix(in srgb, currentColor 10%, transparent);
-  } */
+    ul:first-child li {
+      background-color: color-mix(in srgb, currentColor 10%, transparent);
+    }
 
     .list ul>li {
       display: table-cell;
