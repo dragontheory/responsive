@@ -17,10 +17,10 @@ figure:has(img[src*="staff"])::after {
   background: color-mix(in srgb, currentColor 50%, transparent);
 
   /* Apply SVG as a mask */
-  -webkit-mask-image: url('images/staff/corner.svg');
+  -webkit-mask-image: url('../images/staff/corner.svg');
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
-  mask-image: url('images/staff/corner.svg');
+  mask-image: url('../images/staff/corner.svg');
   mask-size: contain;
   mask-repeat: no-repeat;
 }
