@@ -61,12 +61,12 @@
     width: 4em;
     height: 4em;
     background-color: currentColor;
-    mask-image: url(/images/brand/logo.svg);
+    mask-image: url(../images/brand/logo.svg);
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
 
-    -webkit-mask-image: url(/images/brand/logo.svg);
+    -webkit-mask-image: url(../images/brand/logo.svg);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
     -webkit-mask-size: contain;
