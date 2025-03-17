@@ -11,16 +11,16 @@ figure:has(img[src*="staff"])::after {
   right: 0;
   width: 6.25rem; /* Adjust as needed */
   height: 6.25rem; /* Adjust as needed */
-  background-image: url('/assets/images/staff/corner.svg'); /* Replace with actual SVG */
+  /* background-image: url('assets/images/staff/corner.svg'); Replace with actual SVG */
   pointer-events: none; /* Prevent interaction */
 
   background: color-mix(in srgb, currentColor 50%, transparent);
 
   /* Apply SVG as a mask */
-  -webkit-mask-image: url('/assets/images/staff/corner.svg');
+  -webkit-mask-image: url('assets/images/staff/corner.svg');
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
-  mask-image: url('/assets/images/staff/corner.svg');
+  mask-image: url('assets/images/staff/corner.svg');
   mask-size: contain;
   mask-repeat: no-repeat;
 }
