@@ -3,9 +3,9 @@
   <desc>UI/UX for the Wild Wild Web</desc>
   <defs>
     <style>
-      fill {path: black;}
+      path {fill: currentColor;}
       @media (prefers-color-scheme: dark) {
-        path {fill: white;}
+        path {fill: currentColor;}
       }
     </style>
   </defs>
